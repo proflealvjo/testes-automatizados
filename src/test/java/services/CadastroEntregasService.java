@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 public class CadastroEntregasService {
 
     final EntregaModel entregaModel = new EntregaModel();
-    final Gson gson = new GsonBuilder()
+    public final Gson gson = new GsonBuilder()
             .excludeFieldsWithoutExposeAnnotation()
             .create();
     public Response response;

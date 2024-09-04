@@ -38,4 +38,14 @@ public class CadastroEntregasSteps {
                 cadastroEntregasService.response.jsonPath().prettify(), ErrorMessageModel.class);
         Assert.assertEquals(message, errorMessageModel.getMessage());
     }
+
+    @Dado("que eu recupere o ID da entrega criada no contexto")
+    public void queEuRecupereOIDDaEntregaCriadaNoContexto() {
+        cadastroEntregasService.retrieveIdDelivery();
+    }
+
+    @Quando("eu enviar a requisição com o ID para o endpoint {string} de deleção de entrega")
+    public void euEnviarARequisiçãoComOIDParaOEndpointDeDeleçãoDeEntrega(String endPoint) {
+        cadastroEntregasService.deleteDelevery(endPoint);
+    }
 }

@@ -46,7 +46,7 @@ public class CadastroEntregasService {
         idDelivery = String.valueOf(gson.fromJson(response.jsonPath().prettify(), EntregaModel.class).getNumeroEntrega());
     }
 
-    public void deleteDelevery(String endPoint) {
+    public void deleteDelivery(String endPoint) {
         String url = String.format("%s%s/%s", baseUrl, endPoint, idDelivery);
         response = given()
                 .accept(ContentType.JSON)

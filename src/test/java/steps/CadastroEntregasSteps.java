@@ -46,6 +46,6 @@ public class CadastroEntregasSteps {
 
     @Quando("eu enviar a requisição com o ID para o endpoint {string} de deleção de entrega")
     public void euEnviarARequisiçãoComOIDParaOEndpointDeDeleçãoDeEntrega(String endPoint) {
-        cadastroEntregasService.deleteDelevery(endPoint);
+        cadastroEntregasService.deleteDelivery(endPoint);
     }
 }

@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Deletar uma entrega
   Como usuário da API
   Quero conseguir deletar uma entrega

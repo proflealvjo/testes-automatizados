@@ -1,5 +1,5 @@
 # language: pt
-
+@regressivo
 Funcionalidade: Cadastro de nova entrega
   Como usuário da API
   Quero cadastrar uma nova entrega
@@ -15,6 +15,7 @@ Funcionalidade: Cadastro de nova entrega
     Quando eu enviar a requisição para o endpoint "/entregas" de cadastro de entregas
     Então o status code da resposta deve ser 201
 
+  @padrão
   Cenário: Cadastro de entrega sem sucesso ao passar o campo statusEntrega invalido
     Dado que eu tenha os seguintes dados da entrega:
       | campo          | valor      |

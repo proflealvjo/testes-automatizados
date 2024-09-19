@@ -61,5 +61,6 @@ public class CadastroEntregasSteps {
     public void aRespostaDaRequisiçãoDeveEstarEmConformidadeComOContratoSelecionado() throws IOException {
         //Set<ValidationMessage> validateResponse = cadastroEntregasService.validateResponseAgainstSchema();
         //Assert.assertTrue("O contrato está inválido. Erros encontrados: " + validateResponse, validateResponse.isEmpty());
+
     }
 }

@@ -29,7 +29,7 @@ public class CadastroEntregasService {
             .excludeFieldsWithoutExposeAnnotation()
             .create();
     public Response response;
-    String baseUrl = "http://localhost:8080";
+    String baseUrl = "https://api-entregas-e08b1747db7d.herokuapp.com";
     String idDelivery;
     String schemasPath = "src/test/resources/schemas/";
     JSONObject jsonSchema;
@@ -92,11 +92,14 @@ public class CadastroEntregasService {
 
         // Obter o corpo da resposta como String e converter para JSONObject
         JSONObject jsonResponse = new JSONObject(response.getBody().asString());
+
         // Configurar o JsonSchemaFactory e criar o JsonSchema
         JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance(SpecVersion.VersionFlag.V4);
         JsonSchema schema = schemaFactory.getSchema(jsonSchema.toString());
+
         // Converter o JSON de resposta para JsonNode
         JsonNode jsonResponseNode = mapper.readTree(jsonResponse.toString());
+
         // Validar o JSON de resposta contra o esquema
         Set<ValidationMessage> schemaValidationErrors = schema.validate(jsonResponseNode);
 

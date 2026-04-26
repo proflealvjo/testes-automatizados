@@ -29,7 +29,7 @@ public class CadastroEntregasService {
             .excludeFieldsWithoutExposeAnnotation()
             .create();
     public Response response;
-    String baseUrl = "http://localhost:8080";
+    String baseUrl = "https://tds-on-api-entregas-accb20374610.herokuapp.com";
     String idDelivery;
     String schemasPath = "src/test/resources/schemas/";
     JSONObject jsonSchema;
